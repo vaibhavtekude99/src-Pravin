@@ -1,0 +1,70 @@
+
+      <div class="container" [hidden]="submitted">
+        <h3>Add Request for Travel</h3>
+        <form  (ngSubmit)="onClickLogin()">
+            <div class="row">
+                <div class="col-25">
+                    <label for="employeeId">Employee Id</label>
+                </div>
+                <div class="col-75">
+                    <label for="employeeId">{{travelRequest.employeeDetails.employeeId}}</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="travelPurpose">Travel Purpose</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="travelPurpose" [(ngModel)] = "travelRequest.travelPurpose" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="startDate">Start Date:</label>
+                </div>
+                <div class="col-75">
+                    <input type="date" id="lname" name="startDate" [(ngModel)] = "travelRequest.startDate">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="endDate">End Date:</label>
+                </div>
+                <div class="col-75">
+                    <input type="date" id="lname" name="endDate" [(ngModel)] = "travelRequest.endDate">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="destinationFrom">Destination From</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="destinationFrom" [(ngModel)] = "travelRequest.destinationFrom">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="destinationTo">Destination To</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="destinationTo" [(ngModel)] = "travelRequest.destinationTo">
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Raise Request">
+            </div>
+        </form>
+    </div>
+    <div class="container" [hidden]="!submitted">
+        <p>Request Added Successfully</p>
+        <div class="row">
+        <input type="button" (click)= "goToHome()" value="Back To Home">
+    </div>
+    </div>
+          
+       
+    
+
